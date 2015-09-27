@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Master/Desktop/Projects/Android/Mortgage%201.0/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">Tip Calculator</string>
+    <string name="bill_amount"/>
+    <string name="bill_amount_label">Principal</string>
+    <string name="decrease">-</string>
+    <string name="increase">+</string>
+    <string name="menu_settings">Settings</string>
+    <string name="tip_amount">$0.00</string>
+    <string name="tip_amount_label">Monthly Payment</string>
+    <string name="tip_percent"/>
+    <string name="tip_percent_label">Interest</string>
+    <string name="title_activity_tip_calculator">Tip Calculator</string>
+    <string name="total_amount">$0.00</string>
+    <string name="total_amount_label">Total Pay Back</string>
+    <!-- From: file:/C:/Users/Master/Desktop/Projects/Android/Mortgage%201.0/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppTheme" parent="android:Theme.Light"/>
+    <style name="rButton15year">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/totalLabel</item>
+        <item name="android:layout_toLeftOf">@+id/percentTextView</item>
+        <item name="android:layout_toStartOf">@+id/percentTextView</item>
+    </style>
+</resources>
