@@ -5,7 +5,7 @@
     <style name="rButton15year">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_below">@+id/totalLabel</item>
+        <item name="android:layout_below">@+id/totalMortgageLabel</item>
         <item name="android:layout_toLeftOf">@+id/percentTextView</item>
         <item name="android:layout_toStartOf">@+id/percentTextView</item>
     </style>

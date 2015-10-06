@@ -1,0 +1,271 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#fffabc"
+    android:focusable="true"
+    android:id="@+id/mainScreen">
+
+    <!-- The bill amount -->
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/savedStateSpinner"
+        android:layout_above="@+id/principalEditText"
+        android:layout_marginBottom="23dp"
+        android:spinnerMode="dropdown"
+        android:layout_alignRight="@+id/downPaymentLabel"
+        android:layout_alignEnd="@+id/downPaymentLabel" />
+
+    <TextView
+        android:id="@+id/principalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/principal_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/principalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:text="@string/principal_amount"
+        android:textSize="18sp"
+        android:layout_above="@+id/interestLabel"
+        android:layout_toRightOf="@+id/downPaymentLabel"
+        android:layout_alignRight="@+id/calculateMortgageButton"
+        android:layout_alignEnd="@+id/calculateMortgageButton"
+        android:gravity="center">
+
+        <requestFocus />
+    </EditText>
+
+    <!-- The tip percent -->
+
+    <!-- the tip amount -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/down_payment_label"
+        android:id="@+id/downPaymentLabel"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@+id/principalEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/downPaymentEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:editable="false"
+        android:layout_alignBottom="@+id/downPaymentLabel"
+        android:layout_alignLeft="@+id/interestEditText"
+        android:layout_alignStart="@+id/interestEditText"
+        android:text="@string/down_payment_edit_text"
+        android:layout_alignRight="@+id/interestEditText"
+        android:layout_alignEnd="@+id/interestEditText"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/interestLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/interest_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/principalLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp" />
+
+    <EditText
+        android:id="@+id/interestEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:editable="true"
+        android:layout_alignBottom="@+id/interestBar"
+        android:layout_alignLeft="@+id/principalEditText"
+        android:layout_alignStart="@+id/principalEditText"
+
+        android:layout_alignRight="@+id/principalEditText"
+        android:layout_alignEnd="@+id/principalEditText"
+        android:inputType="numberDecimal"
+        android:text="@string/interest_amount"
+        android:gravity="center" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/interestBar"
+        android:max="15"
+        android:layout_below="@+id/downPaymentEditText"
+        android:layout_toRightOf="@+id/principalEditText"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:indeterminate="false"
+        android:progress="@integer/Interest_spinner_progress" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_mortgage_button"
+        android:id="@+id/calculateMortgageButton"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/principalLabel"
+        android:layout_toEndOf="@+id/principalLabel" />
+
+    <TextView
+        android:id="@+id/monthlyPaymentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/monthly_payment_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/termLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/schMonthlyPaymentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/monthly_payment_amount"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/monthlyPaymentLabel"
+        android:layout_toRightOf="@+id/monthlyPaymentLabel"
+        android:layout_toEndOf="@+id/monthlyPaymentLabel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:singleLine="true" />
+
+    <!-- the total -->
+
+    <TextView
+        android:id="@+id/termLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/term_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/totalMortgageLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/termAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/term_amount"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/termLabel"
+        android:layout_alignLeft="@+id/schMonthlyPaymentAmount"
+        android:layout_alignStart="@+id/schMonthlyPaymentAmount"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/totalMortgageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/total_mortgage_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/totalMortgageAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/total_mortgage_amount"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/totalMortgageLabel"
+        android:layout_alignLeft="@+id/schMonthlyPaymentAmount"
+        android:layout_alignStart="@+id/schMonthlyPaymentAmount"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="90dp"
+        android:layout_height="81dp"
+        android:weightSum="1"
+        android:layout_above="@+id/interestEditText"
+        android:layout_toRightOf="@+id/calculateMortgageButton"
+        android:layout_toEndOf="@+id/calculateMortgageButton"
+        android:id="@+id/linearLayout">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yearGroup"
+            android:layout_alignBottom="@+id/principalEditText"
+            android:layout_toRightOf="@+id/principalEditText"
+            android:layout_alignTop="@+id/principalLabel"
+            android:layout_alignRight="@+id/interestBar"
+            android:layout_alignEnd="@+id/interestBar">
+
+            <RadioButton
+                android:text="@string/year_option_1"
+                android:id="@+id/rButton15Year"
+                android:longClickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:lines="2" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/year_option_2"
+                android:id="@+id/rButton30Year"
+                android:checked="true"
+                android:layout_below="@+id/yearGroup"
+                android:layout_toRightOf="@+id/totalMortgageLabel"
+                android:layout_toEndOf="@+id/totalMortgageLabel"
+                android:layout_gravity="right"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/table_button"
+        android:id="@+id/tableButton"
+        android:layout_above="@+id/monthlyPaymentLabel"
+        android:layout_alignLeft="@+id/calculateMortgageButton"
+        android:layout_alignStart="@+id/calculateMortgageButton"
+        android:layout_marginBottom="21dp"
+        android:layout_alignRight="@+id/calculateMortgageButton"
+        android:layout_alignEnd="@+id/calculateMortgageButton" />
+
+
+</RelativeLayout><!-- From: file:/C:/Users/ct-d119/Desktop/Mortgage%204.0/app/src/main/res/layout/mortgage_calculator_main.xml -->

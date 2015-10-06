@@ -1,19 +1,44 @@
 <resources>
-    <string name="app_name">Tip Calculator</string>
-    <string name="title_activity_tip_calculator">Tip Calculator</string>
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="title_activity_tip_calculator">Mortgage Calculator</string>
     <string name="menu_settings">Settings</string>
 
-    <string name="bill_amount_label">Principal</string>
-    <string name="bill_amount"></string>
+    <string name="principal_label">Principal</string>
+    <string name="principal_amount"></string>
 
-    <string name="tip_percent_label">Interest</string>
-    <string name="tip_percent"></string>
-    <string name="increase">+</string>
-    <string name="decrease">-</string>
-    
-    <string name="tip_amount_label">Monthly Payment</string>
-    <string name="tip_amount">$0.00</string>
+    <string name="interest_label">Interest</string>
+    <string name="interest_amount"></string>
 
-    <string name="total_amount_label">Total Pay Back</string>
-    <string name="total_amount">$0.00</string>
+    <string name="down_payment_label">Down Payment</string>
+    <string name="down_payment_edit_text"></string>
+
+    <string name="year_option_1">15 Year</string>
+    <string name="year_option_2">30 Year</string>
+
+    <string name="term_label">Term(Years)</string>
+    <string name="term_amount">0.00</string>
+
+    <string name="monthly_payment_label">Monthly Payment</string>
+    <string name="monthly_payment_amount">$0.00</string>
+
+    <string name="total_mortgage_label">Total Pay Back</string>
+    <string name="total_mortgage_amount">$0.00</string>
+
+    <string name="calculate_mortgage_button">Calculate Mortgage</string>
+    <string name="state_1">Mortgage 1</string>
+    <string name="table_button">Create Table</string>
+
+    // schedule widgets
+    <string name="sch_monthly_payment_label">Monthly Payment</string>
+    <string name="sch_monthly_payment_amount">$0.00</string>
+    <string name="added_monthly_payment">$0.00</string>
+
+    <string-array name = "mortgage_state_array">
+        <item>Mortgage 1</item>
+        <item>Mortgage 2</item>
+        <item>Mortgage 3</item>
+        <item>Mortgage 4</item>
+        <item>Mortgage 5</item>
+    </string-array>
+
 </resources>

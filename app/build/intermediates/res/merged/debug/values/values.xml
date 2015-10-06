@@ -1,27 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Master/Desktop/Projects/Android/Mortgage%201.0/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/ct-d119/Desktop/Mortgage%204.0/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="app_name">Tip Calculator</string>
-    <string name="bill_amount"/>
-    <string name="bill_amount_label">Principal</string>
-    <string name="decrease">-</string>
-    <string name="increase">+</string>
+    <string-array name="mortgage_state_array">
+        <item>Mortgage 1</item>
+        <item>Mortgage 2</item>
+        <item>Mortgage 3</item>
+        <item>Mortgage 4</item>
+        <item>Mortgage 5</item>
+    </string-array>
+    <!-- From: file:/C:/Users/ct-d119/Desktop/Mortgage%204.0/app/src/main/res/values/integers.xml -->
+    <eat-comment/>
+    <integer name="Interest_spinner_progress">0</integer>
+    <!-- From: file:/C:/Users/ct-d119/Desktop/Mortgage%204.0/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="added_monthly_payment">$0.00</string>
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="calculate_mortgage_button">Calculate Mortgage</string>
+    <string name="down_payment_edit_text"/>
+    <string name="down_payment_label">Down Payment</string>
+    <string name="interest_amount"/>
+    <string name="interest_label">Interest</string>
     <string name="menu_settings">Settings</string>
-    <string name="tip_amount">$0.00</string>
-    <string name="tip_amount_label">Monthly Payment</string>
-    <string name="tip_percent"/>
-    <string name="tip_percent_label">Interest</string>
-    <string name="title_activity_tip_calculator">Tip Calculator</string>
-    <string name="total_amount">$0.00</string>
-    <string name="total_amount_label">Total Pay Back</string>
-    <!-- From: file:/C:/Users/Master/Desktop/Projects/Android/Mortgage%201.0/app/src/main/res/values/styles.xml -->
+    <string name="monthly_payment_amount">$0.00</string>
+    <string name="monthly_payment_label">Monthly Payment</string>
+    <string name="principal_amount"/>
+    <string name="principal_label">Principal</string>
+    <string name="sch_monthly_payment_amount">$0.00</string>
+    <string name="sch_monthly_payment_label">Monthly Payment</string>
+    <string name="state_1">Mortgage 1</string>
+    <string name="table_button">Create Table</string>
+    <string name="term_amount">0.00</string>
+    <string name="term_label">Term(Years)</string>
+    <string name="title_activity_tip_calculator">Mortgage Calculator</string>
+    <string name="total_mortgage_amount">$0.00</string>
+    <string name="total_mortgage_label">Total Pay Back</string>
+    <string name="year_option_1">15 Year</string>
+    <string name="year_option_2">30 Year</string>
+    <!-- From: file:/C:/Users/ct-d119/Desktop/Mortgage%204.0/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Light"/>
     <style name="rButton15year">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_below">@+id/totalLabel</item>
+        <item name="android:layout_below">@+id/totalMortgageLabel</item>
         <item name="android:layout_toLeftOf">@+id/percentTextView</item>
         <item name="android:layout_toStartOf">@+id/percentTextView</item>
     </style>
